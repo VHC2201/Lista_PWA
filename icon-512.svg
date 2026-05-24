@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="110" fill="#0f172a"/>
+  <rect x="50" y="50" width="412" height="412" rx="80" fill="#1e293b"/>
+  <!-- Star accent -->
+  <text x="256" y="155" text-anchor="middle" font-size="56" fill="#38bdf8">✦</text>
+  <!-- Task lines -->
+  <rect x="130" y="195" width="252" height="14" rx="7" fill="#334155"/>
+  <rect x="130" y="225" width="200" height="14" rx="7" fill="#334155"/>
+  <rect x="130" y="255" width="220" height="14" rx="7" fill="#334155"/>
+  <!-- Checkmark -->
+  <circle cx="256" cy="340" r="52" fill="none" stroke="#38bdf8" stroke-width="9"/>
+  <polyline points="228,340 246,360 288,316" fill="none" stroke="#34d399" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
