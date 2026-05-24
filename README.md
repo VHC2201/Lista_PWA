@@ -1,23 +1,23 @@
-# ✦ Tarefas PWA
+#  Tarefas PWA
 
 > Lista de tarefas pessoal como Progressive Web App — funciona offline, instala no dispositivo e salva dados localmente.
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
 | Recurso | Detalhes |
 |---|---|
-| ✅ **Offline-first** | Funciona sem internet após o primeiro acesso via Service Worker |
-| 📲 **Instalável** | Botão de instalação + `manifest.json` para adicionar à tela inicial |
-| 💾 **Dados locais** | `localStorage` com validação e tratamento de erros |
-| 🔄 **Cache inteligente** | Cache First para assets + Network First para navegação |
-| 🌐 **Status de rede** | Detecta online/offline e notifica o usuário |
-| ♿ **Acessibilidade** | ARIA labels, navegação por teclado, foco gerenciado |
-| 🔒 **Segurança** | Sanitização de entrada (anti-XSS), IDs via `crypto.randomUUID` |
-| 🎨 **Design dark** | Tema escuro com gradiente, tipografia refinada, animações CSS |
-| 🔔 **Toasts** | Notificações não-intrusivas para ações do usuário |
-| ⌨️ **Atalhos** | `Ctrl+Enter` adiciona · `Esc` limpa o campo |
+|  **Offline-first** | Funciona sem internet após o primeiro acesso via Service Worker |
+|  **Instalável** | Botão de instalação + `manifest.json` para adicionar à tela inicial |
+|  **Dados locais** | `localStorage` com validação e tratamento de erros |
+|  **Cache inteligente** | Cache First para assets + Network First para navegação |
+|  **Status de rede** | Detecta online/offline e notifica o usuário |
+|  **Acessibilidade** | ARIA labels, navegação por teclado, foco gerenciado |
+|  **Segurança** | Sanitização de entrada (anti-XSS), IDs via `crypto.randomUUID` |
+|  **Design dark** | Tema escuro com gradiente, tipografia refinada, animações CSS |
+|  **Toasts** | Notificações não-intrusivas para ações do usuário |
+|  **Atalhos** | `Ctrl+Enter` adiciona · `Esc` limpa o campo |
 
-## 🗂️ Estrutura
+##  Estrutura
 
 ```
 todo-pwa/
@@ -31,7 +31,7 @@ todo-pwa/
 └── README.md
 ```
 
-## 🧪 Como testar
+##  Como testar
 
 ### 1. Servir localmente (Service Workers exigem HTTPS ou localhost)
 
@@ -56,7 +56,7 @@ Abra `http://localhost:8080`.
 ### 3. Testar cache
 
 - **Application → Cache Storage**: veja os caches `todo-pwa-static-v3` e `todo-pwa-dynamic-v3`
-- **Network** tab: recursos servidos do cache aparecem com ⚙️ (Service Worker)
+- **Network** tab: recursos servidos do cache aparecem com  (Service Worker)
 
 ### 4. Instalar como app
 
@@ -68,7 +68,7 @@ Abra `http://localhost:8080`.
 
 Rode a auditoria PWA no DevTools → Lighthouse para verificar a pontuação.
 
-## 🔑 Conceitos PWA demonstrados
+##  Conceitos PWA demonstrados
 
 ### Lifecycle do Service Worker
 
@@ -90,6 +90,8 @@ register() → install (pré-cacheia shell) → activate (limpa caches antigos) 
 - `localStorage` com try/catch e validação de schema ao carregar
 - IDs únicos via `crypto.randomUUID()`
 
-## 👥 Equipe
+##  Equipe
 
-Desenvolvido para a Atividade 4 — PWA · Disciplina de Desenvolvimento Web.
+- Desenvolvido para a Atividade 4 — PWA · 
+- Vinicius Cordeiro.
+- Disciplina de Desenvolvimento Web.
