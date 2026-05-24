@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Lista de tarefas offline com PWA — funciona sem internet." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Tarefas" />
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-192.svg" />
+  <link rel="icon" href="icon-192.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <title>Tarefas — PWA</title>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main class="app-shell">
+
+    <header class="app-header">
+      <div class="header-left">
+        <span class="app-logo" aria-hidden="true">✦</span>
+        <div>
+          <h1>Tarefas</h1>
+          <p class="subtitle" id="subtitleText">Lista pessoal offline</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div id="offlineBadge" class="badge badge--offline" hidden aria-live="polite">
+          <span class="badge-dot"></span> Offline
+        </div>
+        <button id="installBtn" class="btn-install" hidden aria-label="Instalar aplicativo">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          Instalar
+        </button>
+      </div>
+    </header>
+
+    <section class="stats-row" id="statsRow" hidden>
+      <div class="stat-chip" id="statTotal"><span class="stat-num" id="numTotal">0</span><span class="stat-label">total</span></div>
+      <div class="stat-chip stat-chip--done" id="statDone"><span class="stat-num" id="numDone">0</span><span class="stat-label">concluídas</span></div>
+      <div class="stat-chip stat-chip--pending" id="statPending"><span class="stat-num" id="numPending">0</span><span class="stat-label">pendentes</span></div>
+    </section>
+
+    <section class="task-card">
+      <div class="form-area">
+        <label for="taskInput" class="form-label">Nova tarefa</label>
+        <div class="input-row">
+          <input
+            id="taskInput"
+            type="text"
+            class="task-input"
+            placeholder="O que precisa ser feito?"
+            maxlength="120"
+            autocomplete="off"
+            spellcheck="true"
+            aria-label="Descreva a nova tarefa"
+            required
+          />
+          <button type="button" id="addBtn" class="btn-add" aria-label="Adicionar tarefa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+        <div class="input-meta">
+          <span id="charCount" class="char-count">0 / 120</span>
+          <span id="formError" class="form-error" role="alert" aria-live="assertive"></span>
+        </div>
+      </div>
+
+      <div class="filter-bar" id="filterBar" hidden>
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="pending">Pendentes</button>
+        <button class="filter-btn" data-filter="done">Concluídas</button>
+        <button id="clearDoneBtn" class="filter-btn filter-btn--danger" aria-label="Remover tarefas concluídas">Limpar concluídas</button>
+      </div>
+
+      <div id="statusMessage" class="status-message" aria-live="polite">Nenhuma tarefa adicionada ainda.</div>
+      <ul id="taskList" class="task-list" aria-label="Lista de tarefas" aria-live="polite"></ul>
+    </section>
+
+    <footer class="app-footer">
+      PWA · Service Worker · Armazenamento local · Funciona offline
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
