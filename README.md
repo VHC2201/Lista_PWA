@@ -92,6 +92,6 @@ register() → install (pré-cacheia shell) → activate (limpa caches antigos) 
 
 ##  Equipe
 
+- Nome: Vinicius Cordeiro.
 - Desenvolvido para a Atividade 4 — PWA · 
-- Vinicius Cordeiro.
 - Disciplina de Desenvolvimento Web.
